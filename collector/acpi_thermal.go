@@ -18,7 +18,7 @@ type AcpiThermalCollector struct {
 }
 
 func NewAcpiThermalCollector() (Collector, error) {
-	const subsystem = "MSAcpi"
+	const subsystem = "acpi_thermal"
 	return &AcpiThermalCollector{
 		CurrentTemperature: prometheus.NewDesc(
 			prometheus.BuildFQName(Namespace, subsystem, "current_temperature"),
